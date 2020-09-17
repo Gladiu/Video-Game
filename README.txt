@@ -1,0 +1,1 @@
+To jest gra komputerowa do grania z kolegami. :)
