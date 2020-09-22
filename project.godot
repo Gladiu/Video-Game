@@ -17,3 +17,9 @@ _global_script_class_icons={
 
 config/name="Project"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=800
+window/size/resizable=false
+window/stretch/aspect="keep"
