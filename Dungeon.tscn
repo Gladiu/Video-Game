@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://dungeon.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://Dungeon.gd" type="Script" id=2]
+[ext_resource path="res://DebugCamera.gd" type="Script" id=3]
 
 [node name="Dungeon" type="Spatial"]
 script = ExtResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.0129849, 0.999916, 0, -0.999916, -0.0129849, 0, 41.5426, -0.298733 )
+transform = Transform( 1, 0, 0, 0, -0.0129849, 0.999916, 0, -0.999916, -0.0129849, 0, 66.1524, -0.298733 )
+script = ExtResource( 3 )
 
 [node name="Wall" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
