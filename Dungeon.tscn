@@ -2,14 +2,12 @@
 
 [ext_resource path="res://dungeon.meshlib" type="MeshLibrary" id=1]
 [ext_resource path="res://Dungeon.gd" type="Script" id=2]
-[ext_resource path="res://DebugCamera.gd" type="Script" id=3]
 
-[node name="Dungeon" type="Spatial"]
+[sub_resource type="Environment" id=1]
+
+[node name="Dungeon" type="WorldEnvironment"]
+environment = SubResource( 1 )
 script = ExtResource( 2 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.0129849, 0.999916, 0, -0.999916, -0.0129849, 0, 66.1524, -0.298733 )
-script = ExtResource( 3 )
 
 [node name="Wall" type="GridMap" parent="."]
 mesh_library = ExtResource( 1 )
@@ -40,3 +38,6 @@ __meta__ = {
 "_editor_clip_": 0,
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0477342, 0.99886, 0, -0.99886, -0.0477342, 0, 58.9071, 0 )
