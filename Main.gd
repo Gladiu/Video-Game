@@ -17,13 +17,9 @@ func _ready():
 	
 	# Loading Hero scene
 	hero_scene = preload("res://Hero.tscn")
-	hero_node = dungeon_scene.instance()
+	hero_node = hero_scene.instance()
 	add_child(hero_node)
-	
-	# Setting up camera position
-	var camera_transform = $Camera.get_camera_transform()
-	camera_transform.origin.y += 30
-	$Camera.transform = camera_transform
+
 	
 func _process(delta):
 	var movement = Vector2(0,0)

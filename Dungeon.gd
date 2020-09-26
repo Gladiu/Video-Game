@@ -1,11 +1,13 @@
 extends WorldEnvironment
 
+var spawn_coordinates
 
 
 
 func _ready():
 	generate_dungeon_floor(7)
 	generate_walls()
+	
 
 func make_room_tiles_at(room_center):
 	var tile_array = []

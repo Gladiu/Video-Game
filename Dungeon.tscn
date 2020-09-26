@@ -4,6 +4,7 @@
 [ext_resource path="res://Dungeon.gd" type="Script" id=2]
 
 [sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.515625, 0.515625, 0.515625, 1 )
 
 [node name="Dungeon" type="WorldEnvironment"]
 environment = SubResource( 1 )
