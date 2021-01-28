@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/models/Material_002.material" type="Material" id=1]
 
-[sub_resource type="ArrayMesh" id=2]
+[sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
 surfaces/0 = {
 "aabb": AABB( -1, -1, -1, 2.00001, 2.00001, 2 ),
@@ -19,5 +19,5 @@ surfaces/0 = {
 
 [node name="Cube" type="MeshInstance"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19164, 0 )
-mesh = SubResource( 2 )
+mesh = SubResource( 1 )
 material/0 = null

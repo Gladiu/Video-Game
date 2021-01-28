@@ -6,11 +6,13 @@
 [sub_resource type="Environment" id=1]
 ambient_light_color = Color( 0.192157, 0.192157, 0.192157, 1 )
 
-[node name="Dungeon" type="WorldEnvironment"]
-environment = SubResource( 1 )
+[node name="Dungeon" type="Spatial"]
 script = ExtResource( 2 )
 
-[node name="Wall" type="GridMap" parent="."]
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Wall" type="GridMap" parent="Environment"]
 mesh_library = ExtResource( 1 )
 data = {
 "cells": PoolIntArray(  )
@@ -19,7 +21,7 @@ __meta__ = {
 "_editor_clip_": 0
 }
 
-[node name="Wall2" type="GridMap" parent="."]
+[node name="Wall2" type="GridMap" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
 mesh_library = ExtResource( 1 )
 data = {
@@ -29,7 +31,7 @@ __meta__ = {
 "_editor_clip_": 0
 }
 
-[node name="Floor" type="GridMap" parent="."]
+[node name="Floor" type="GridMap" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
 mesh_library = ExtResource( 1 )
 data = {
@@ -40,5 +42,5 @@ __meta__ = {
 "_editor_floor_": Vector3( 0, 0, 0 )
 }
 
-[node name="Camera" type="Camera" parent="."]
+[node name="Camera" type="Camera" parent="Environment"]
 transform = Transform( 1, 0, 0, 0, -0.0477342, 0.99886, 0, -0.99886, -0.0477342, 0, 58.9071, 0 )
